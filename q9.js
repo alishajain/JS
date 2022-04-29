@@ -18,4 +18,4 @@ const family = [
     }
   ];
 
-family.reduce((acc, curr) => curr.haveCycle === true? {...acc, acc:curr.name}:{...acc});
+family.reduce((acc, curr) => curr.haveCycle? [...acc, curr.name]:[...acc], []);
